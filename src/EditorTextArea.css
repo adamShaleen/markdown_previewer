@@ -1,4 +1,6 @@
-.EditorTextArea {
-  width: 100%;
-  min-height: 300px;
+#editor {
+  border: 1px solid black;
+  width: 98%;
+  min-height: 250px;
+  outline: none;
 }
