@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Header from './Header';
 import RenderedPreview from './RenderedPreview';
 
-class Preview extends Component {
-  render() {
+function Preview() {
     const PREVIEW_HEADER = "Preview"
     return(
       <div>
@@ -11,7 +10,6 @@ class Preview extends Component {
         <RenderedPreview />
       </div>
     )
-  }
 }
 
 export default Preview;

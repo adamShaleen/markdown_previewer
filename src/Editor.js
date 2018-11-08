@@ -1,10 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Header from './Header';
 import EditorTextArea from './EditorTextArea';
-import Preview from './Preview'
 
-class Editor extends Component {
-  render() {
+function Editor() {
     const EDITOR_HEADER = "Editor"
     return (
       <div>
@@ -12,7 +10,6 @@ class Editor extends Component {
         <EditorTextArea />
       </div>
     )
-  }
 }
 
 export default Editor;
