@@ -18,8 +18,7 @@ class App extends Component {
 export default App;
 
 
-// User Story #1: I can see a textarea element with a corresponding
-//id="editor".
+// User Story #1: I can see a textarea element with a corresponding id="editor".
 
 // User Story #2: I can see an element with a corresponding id="preview".
 

@@ -1,6 +1,7 @@
-#editor {
-  /* border: 1px solid black;
-  width: 98%;
-  min-height: 250px;
-  outline: none; */
+textarea {
+     width: 100%;
+     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+     box-sizing: border-box;         /* Opera/IE 8+ */
+     min-height: 250px;
 }
