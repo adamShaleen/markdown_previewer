@@ -2,12 +2,13 @@ import React from 'react';
 import Header from './Header';
 import EditorTextArea from './EditorTextArea';
 
-function Editor() {
+function Editor(props) {
+
     const EDITOR_HEADER = "Editor"
     return (
       <div>
         <Header title={EDITOR_HEADER} />
-        <EditorTextArea />
+        <EditorTextArea rawTextInput={props.rawTextInput}/>
       </div>
     )
 }

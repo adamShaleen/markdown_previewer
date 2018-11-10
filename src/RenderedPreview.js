@@ -1,12 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './RenderedPreview.css';
 
-class RenderedPreview extends Component {
-    render() {
-        return(
-            <div id="preview">{this.props.markdown}</div>
-        )
-    }
+function RenderedPreview(props) {
+    return(
+        <div id="preview">{props.markdown}</div>
+    )
 }
 
 export default RenderedPreview;

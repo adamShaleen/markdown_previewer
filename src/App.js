@@ -3,19 +3,41 @@ import './normalize.css';
 import './App.css';
 import Editor from './Editor';
 import Preview from './Preview';
+import marked from 'marked';
+import PLACEHOLDER_TEXT from './PlaceHolderText.js';
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <Editor />
-        <Preview />
-      </div>
-    );
-  }
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            rawTextInput: PLACEHOLDER_TEXT,
+            markdown: PLACEHOLDER_TEXT
+        }
+
+        this.getMarkdown = this.getMarkdown.bind(this);
+    }
+
+    getMarkdown() {
+        let rawMarkdown = marked(this.state.markdown, {sanitize: true});
+        return {__html: rawMarkdown};
+    }
+
+    render() {
+        return (
+            <div className="App">
+                <Editor rawTextInput={this.state.rawTextInput}/>
+                <Preview markdown={this.state.markdown}/>
+            </div>
+        );
+    }
 }
 
 export default App;
+
+// data flow: raw text input from editor gets passed to preview
+// and then gets passed to rendered preview to convert the text to
+// markup and display in the div container
 
 
 // User Story #1: I can see a textarea element with a corresponding id="editor".

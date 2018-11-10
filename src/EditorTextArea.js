@@ -1,12 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './EditorTextArea.css';
 
-class EditorTextArea extends Component {
-  render() {
+function EditorTextArea(props) {
     return(
-      <textarea id="editor">Text area</textarea>
+      <textarea id="editor">{props.rawTextInput}</textarea>
     )
-  }
 }
 
 export default EditorTextArea;
