@@ -3,7 +3,6 @@ import './normalize.css';
 import './App.css';
 import Editor from './Editor';
 import Preview from './Preview';
-import marked from 'marked';
 import PLACEHOLDER_TEXT from './PlaceHolderText.js';
 
 class App extends Component {
@@ -14,13 +13,6 @@ class App extends Component {
             rawTextInput: PLACEHOLDER_TEXT,
             markdown: PLACEHOLDER_TEXT
         }
-
-        this.getMarkdown = this.getMarkdown.bind(this);
-    }
-
-    getMarkdown() {
-        let rawMarkdown = marked(this.state.markdown, {sanitize: true});
-        return {__html: rawMarkdown};
     }
 
     render() {
