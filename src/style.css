@@ -1,5 +1,4 @@
 .Header {
-    border: 1px solid;
     font-size: 20px;
     padding: 5px;
 }
@@ -11,6 +10,7 @@ textarea {
     box-sizing: border-box;         /* Opera/IE 8+ */
     min-height: 300px;
     padding: 5px;
+    border: 1px solid;
 }
 
 #preview {
@@ -26,6 +26,11 @@ textarea {
 }
 
 @media(min-width: 768px) {
+    body {
+        width: 80%;
+        margin: auto;
+    }
+    
     .App {
         display: flex;
         justify-content: center;
