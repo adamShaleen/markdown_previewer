@@ -1,25 +1,39 @@
 import React, { Component } from 'react';
-import './normalize.css';
-import './App.css';
-import Editor from './Editor';
-import Preview from './Preview';
+import './style.css';
+import Header from './Header';
+import RenderedPreview from './RenderedPreview';
 import PLACEHOLDER_TEXT from './PlaceHolderText.js';
 
 class App extends Component {
     constructor(props) {
         super(props);
 
-        this.state = {
-            rawTextInput: PLACEHOLDER_TEXT,
-            markdown: PLACEHOLDER_TEXT
-        }
+        this.state= ({
+            input: PLACEHOLDER_TEXT
+        });
+
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleChange(e) {
+        this.setState({
+            input: e.target.value
+        });
     }
 
     render() {
         return (
             <div className="App">
-                <Editor rawTextInput={this.state.rawTextInput}/>
-                <Preview markdown={this.state.markdown}/>
+                <div id="editor_container">
+                    <Header title="Editor" />
+                    <textarea id="editor"
+                        onChange={this.handleChange}
+                        value={this.state.input}/>
+                </div>
+                <div id="preview_container">
+                    <Header title="Preview" />
+                    <RenderedPreview id="preview" input={this.state.input}/>
+                </div>
             </div>
         );
     }

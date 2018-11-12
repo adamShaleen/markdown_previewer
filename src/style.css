@@ -1,0 +1,42 @@
+.Header {
+    border: 1px solid;
+    font-size: 20px;
+    padding: 5px;
+}
+
+textarea {
+    width: 100%;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+    min-height: 300px;
+    padding: 5px;
+}
+
+#preview {
+    width: 100%;
+    border: 1px solid black;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+#preview img {
+    width: 250px;
+    height: 250px;
+}
+
+@media(min-width: 768px) {
+    .App {
+        display: flex;
+        justify-content: center;
+    }
+
+    #editor_container {
+        width: 40%;
+        margin-right: 5px;
+    }
+
+    #preview_container {
+        width: 60%;
+    }
+}
