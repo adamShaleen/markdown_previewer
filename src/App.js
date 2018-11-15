@@ -24,16 +24,19 @@ class App extends Component {
     render() {
         return (
             <div className="App">
+
                 <div id="editor_container">
                     <Header title="Editor" />
                     <textarea id="editor"
                         onChange={this.handleChange}
                         value={this.state.input}/>
                 </div>
+
                 <div id="preview_container">
                     <Header title="Preview" />
                     <RenderedPreview id="preview" input={this.state.input}/>
                 </div>
+
             </div>
         );
     }
